@@ -18,17 +18,17 @@
                 {% csrf_token %}
                 <div class="mb-3">
                   <label for="name"> Employee name</label> 
-                  <input id="name" type="text" class="form-control" placeholder="Enter emp name" name="emp_name">
+                  <input id="name" type="text" class="form-control" placeholder="Enter emp name" name="emp_name" required>
                 </div>
 
                 <div class="mb-3">
                   <label for="id"> Employee id</label> 
-                  <input id="id" type="text" class="form-control" placeholder="Enter emp id"name= "emp_id">
+                  <input id="id" type="text" class="form-control" placeholder="Enter emp id"name= "emp_id" >
                 </div>
 
                 <div class="mb-3">
                   <label for="phone"> Employee phone </label> 
-                  <input id="phone" type="text" class="form-control" placeholder="Enter emp number" name="emp_phone">
+                  <input id="phone" type="text" class="form-control" placeholder="Enter emp number" name="emp_phone" required>
                 </div>
 
                 <div class="mb-3">
@@ -48,6 +48,7 @@
                   <option value="ME">Mechanical Eng</option>
                   <option value="EE">Electrical Eng</option>
                 </select>  
+                <br>  
                 <div class="container text-center">
                   <button class="btn btn-primary">Add Employee</button>
                 </div>

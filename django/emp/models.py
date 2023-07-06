@@ -13,12 +13,18 @@ class Emp(models.Model):
         return self.name
     
 class Testimonial(models.Model):
-    name=models.CharField(max_length=200)
+    email=models.EmailField(max_length=200,default='example@example.com')
     testimonial=models.TextField()
     picture=models.ImageField(upload_to="testimonials/")
     rating=models.IntegerField(max_length=1)
     
     def __str__(self):
-        return self.name
+        return self.email
     
+class Feedback(models.Model):
+    email=models.EmailField(max_length=200)
+    rating=models.IntegerField(max_length=1)
+    feedback=models.TextField()
     
+    def __str__(self) -> str:
+        return self.name  
